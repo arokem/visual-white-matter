@@ -12,9 +12,12 @@ Each cell is submitted to the kernel, and checked for errors.
 """
  
 import os,sys,time
- 
-from Queue import Empty
- 
+
+try:
+    import queue
+    from Queue import Empty
+
+
 try:
     from IPython.kernel import KernelManager
 except ImportError:
@@ -47,26 +50,26 @@ def run_notebook(nb):
             reply = shell.get_msg(timeout=100)['content']
             if reply['status'] == 'error':
                 failures += 1
-                print "\nFAILURE:"
-                print cell.input
-                print '-----'
-                print "raised:"
-                print '\n'.join(reply['traceback'])
+                print("\nFAILURE:")
+                print(cell.input)
+                print('-----')
+                print("raised:")
+                print('\n'.join(reply['traceback']))
             cells += 1
             sys.stdout.write('.')
  
     print
-    print "ran notebook %s" % nb.metadata.name
-    print "    ran %3i cells" % cells
+    print("ran notebook %s" % nb.metadata.name)
+    print("    ran %3i cells" % cells)
     if failures:
-        print "    %3i cells raised exceptions" % failures
+        print("    %3i cells raised exceptions" % failures)
     kc.stop_channels()
     km.shutdown_kernel()
     del km
  
 if __name__ == '__main__':
     for ipynb in sys.argv[1:]:
-        print "running %s" % ipynb
+        print("running %s" % ipynb)
         with open(ipynb) as f:
             nb = reads(f.read(), 'json')
         run_notebook(nb)
