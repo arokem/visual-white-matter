@@ -35,7 +35,7 @@ the notebook files (using `cd`) and type:
     ipython notebook
 
 A browser window should open with a list of notebook files. Start by reading
-the 'index' notebook and follow the instructions from there.
+the `index` notebook and follow the instructions from there.
 
 
 
