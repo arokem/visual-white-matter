@@ -22,7 +22,7 @@ One way to install these is by using the (free) Anaconda software distribution:
 
 - To install `dipy` and its dependencies, type:
 
-    pip install dipy
+        pip install dipy
 
    At a terminal/shell window. This should download and install all of the
    required software dependencies
