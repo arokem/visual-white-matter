@@ -25,7 +25,12 @@ One way to install these is by using the (free) Anaconda software distribution:
         pip install dipy
 
    At a terminal/shell window. This should download and install all of the
-   required software dependencies
+   required software dependencies. 
+   
+One of the notebooks also requires the [scikit-learn](http://scikit-learn.org/) 
+library, which can be installed by typing:
+
+        pip install scikit-learn
 
 Once you have followed these instructions, you should have all the software
 needed installed on your computer. To start running the notebooks, change the
