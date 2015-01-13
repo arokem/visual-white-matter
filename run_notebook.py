@@ -1,30 +1,25 @@
 #!/usr/bin/env python
 """
-Thanks to Min RK for:
-
-https://gist.github.com/minrk/2620876
-
 simple example script for running notebooks and reporting exceptions.
- 
-Usage: `run_notebook.py foo.ipynb [bar.ipynb [...]]`
- 
+
+Usage: `checkipnb.py foo.ipynb [bar.ipynb [...]]`
+
 Each cell is submitted to the kernel, and checked for errors.
+
+From: https://gist.github.com/minrk/2620876
 """
- 
+
 import os,sys,time
 
-try:
-    import queue
-    from Queue import Empty
-
+from Queue import Empty
 
 try:
     from IPython.kernel import KernelManager
 except ImportError:
     from IPython.zmq.blockingkernelmanager import BlockingKernelManager as KernelManager
- 
+
 from IPython.nbformat.current import reads, NotebookNode
- 
+
 def run_notebook(nb):
     km = KernelManager()
     km.start_kernel(stderr=open(os.devnull, 'w'))
@@ -46,30 +41,29 @@ def run_notebook(nb):
             if cell.cell_type != 'code':
                 continue
             shell.execute(cell.input)
-            # wait for finish, maximum 20s
-            reply = shell.get_msg(timeout=100)['content']
+            reply = shell.get_msg(timeout=20000)['content']
             if reply['status'] == 'error':
                 failures += 1
-                print("\nFAILURE:")
-                print(cell.input)
-                print('-----')
-                print("raised:")
-                print('\n'.join(reply['traceback']))
+                print "\nFAILURE:"
+                print cell.input
+                print '-----'
+                print "raised:"
+                print '\n'.join(reply['traceback'])
             cells += 1
             sys.stdout.write('.')
- 
+
     print
-    print("ran notebook %s" % nb.metadata.name)
-    print("    ran %3i cells" % cells)
+    print "ran notebook %s" % nb.metadata.name
+    print "    ran %3i cells" % cells
     if failures:
-        print("    %3i cells raised exceptions" % failures)
+        print "    %3i cells raised exceptions" % failures
     kc.stop_channels()
     km.shutdown_kernel()
     del km
- 
+
 if __name__ == '__main__':
     for ipynb in sys.argv[1:]:
-        print("running %s" % ipynb)
+        print "running %s" % ipynb
         with open(ipynb) as f:
             nb = reads(f.read(), 'json')
         run_notebook(nb)
