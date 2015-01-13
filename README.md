@@ -22,7 +22,8 @@ One way to install these is by using the (free) Anaconda software distribution:
 
 - To install `dipy` and all the other dependencies, type:
 
-        conda install dipy scikit-learn vtk ipython
+        conda install scikit-learn vtk ipython pip
+        pip install dipy 
 
    At a terminal/shell window. This should download and install all of the
    required software dependencies to run all of the 
