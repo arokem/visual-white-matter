@@ -20,18 +20,13 @@ One way to install these is by using the (free) Anaconda software distribution:
   instructions therein to download and install the distribution for your
   platform.
 
-- To install `dipy` and its dependencies, type:
+- To install `dipy` and all the other dependencies, type:
 
-        pip install dipy
+        conda install dipy scikit-learn vtk ipython
 
    At a terminal/shell window. This should download and install all of the
-   required software dependencies. 
+   required software dependencies to run all of the 
    
-One of the notebooks also requires the [scikit-learn](http://scikit-learn.org/) 
-library, which can be installed by typing:
-
-        pip install scikit-learn
-
 Once you have followed these instructions, you should have all the software
 needed installed on your computer. To start running the notebooks, change the
 working directory of your terminal to the directory where you have downloaded
