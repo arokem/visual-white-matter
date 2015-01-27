@@ -1,6 +1,8 @@
 jov-white-matter-matters
 ========================
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/arokem/jov-white-matter-matters?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Examples of diffusion MRI analysis for vision science. Supplementary material to: 
 
 "The visual white matter matters! Application of diffusion MRI and fiber tractography to vision science" 
