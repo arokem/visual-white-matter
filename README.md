@@ -1,7 +1,7 @@
 white-matter-matters
 ========================
 
-Examples of diffusion MRI analysis for vision science. Supplementary material to: 
+Examples of diffusion MRI analysis for vision science.
 
 ## Instructions
 
