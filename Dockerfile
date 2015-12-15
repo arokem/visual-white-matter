@@ -12,3 +12,4 @@ ADD https://stacks.stanford.edu/file/druid:ng782rw8378/SUB1_b2000_1.bvecs /home/
 ADD https://stacks.stanford.edu/file/druid:ng782rw8378/SUB1_b2000_2.bvecs /home/main/notebooks/data/
 ADD https://stacks.stanford.edu/file/druid:ng782rw8378/SUB1_aparc-reduced.nii.gz /home/main/notebooks/data/
 ADD https://stacks.stanford.edu/file/druid:ng782rw8378/SUB1_t1_resamp.nii.gz /home/main/notebooks/data/
+ADD https://raw.githubusercontent.com/arokem/xvfbmagic/master/xvfbmagic.py /home/main/notebooks/
