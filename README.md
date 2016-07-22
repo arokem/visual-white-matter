@@ -1,6 +1,3 @@
-white-matter-matters
-========================
-
 Examples of diffusion MRI analysis for vision science.
 
 [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/arokem/white-matter-matters)
