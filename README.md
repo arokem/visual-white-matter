@@ -1,4 +1,4 @@
-Examples of diffusion MRI analysis for vision science.
+# Examples of diffusion MRI analysis for vision science.
 
 ## Instructions
 
@@ -29,6 +29,6 @@ the notebook files (using `cd`) and type:
 A browser window should open with a list of notebook files. Start by reading
 the `index` notebook and follow the instructions from there.
 
-Thanks to the [Binder](http://mybinder.org/) system, you can also run the live notebooks without installing the software by clicking on the following badge:s
+Thanks to the [Binder](http://mybinder.org/) system, you can also run the live notebooks without installing the software by clicking on the following badge:
 
 [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/arokem/white-matter-matters)
