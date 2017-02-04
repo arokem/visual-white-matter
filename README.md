@@ -32,3 +32,5 @@ the `index` notebook and follow the instructions from there.
 Thanks to the [Binder](http://mybinder.org/) system, you can also run the live notebooks without installing the software by clicking on the following badge:
 
 [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/arokem/white-matter-matters)
+
+License: [![CC-BY](https://i.creativecommons.org/l/by/3.0/88x31.png)](https://creativecommons.org/licenses/by/3.0/)
