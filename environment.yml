@@ -1,10 +1,10 @@
-name: white-matter-matters
+name: vwm
+channels:
+  - conda-forge
 dependencies:
-  - numpy
-  - scipy
-  - scikit-learn==0.16.1
-  - vtk=5.10.1=py27_0
+  - scikit-learn
+  - fury
   - matplotlib
-  - pip:
-    - dipy==0.9.2
-    - nibabel==2.0.0
+  - dipy
+  - jupyter
+  - notebook
