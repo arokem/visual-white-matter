@@ -2,6 +2,11 @@
 
 ## Instructions
 
+Click on this link to launch the binder:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/arokem/visual-white-matter/HEAD)
+
+
 To run these notebooks, you will need to install the
 [`IPython`](http://ipython.org) software, as well as [`dipy`](http://dipy.org).
 
@@ -33,8 +38,10 @@ Thanks to the [Binder](http://mybinder.org/) system, you can also run the live n
 
 [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/repo/arokem/white-matter-matters)
 
-## License 
 
-The materials in this repository are available under the Creative Commons attribution license: 
+
+## License
+
+The materials in this repository are available under the Creative Commons attribution license:
 
 [![CC-BY](https://i.creativecommons.org/l/by/3.0/88x31.png)](https://creativecommons.org/licenses/by/3.0/)
